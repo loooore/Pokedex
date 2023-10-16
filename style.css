@@ -33,6 +33,31 @@ main {
     height: 18%;
 }
 
+.types {
+    position: absolute;
+    width: 55%;
+    height: 3.8%;
+    bottom: 47.4%;
+    right: 26.8%;
+}
+
+.pokemon_type {
+    position: relative;
+    margin: auto;
+    width: 10%;
+    padding: 0% .5%;
+}
+
+.stats {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 5%;
+    top: 30%;
+    right: 27.5%;
+    gap: 17px;
+}
+
 .pokemon_data {
     position: absolute;
     font-weight: 600;
