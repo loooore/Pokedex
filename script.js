@@ -426,15 +426,34 @@ btnPrev.addEventListener('click', () => {
     if (searchPokemon > 1) {
         searchPokemon -= 1
         renderPokemon(searchPokemon)
+        divType.innerHTML = ''
     }
-    divType.innerHTML = ''
 });
 
+
 btnNext.addEventListener('click', () => {
-    if (searchPokemon < 649)
-    searchPokemon += 1
-    renderPokemon(searchPokemon)
-    divType.innerHTML = ''
+    if (searchPokemon < 649) {
+        searchPokemon += 1
+        renderPokemon(searchPokemon)
+        divType.innerHTML = ''
+    }
 });
+
+document.addEventListener('keydown', ({key}) =>{
+    if (key == 'ArrowLeft') {
+        if (searchPokemon > 1) {
+            searchPokemon -= 1
+            renderPokemon(searchPokemon)
+            divType.innerHTML = ''
+        }
+    }
+    if (key == 'ArrowRight') {
+        if (searchPokemon < 649) {
+            searchPokemon += 1
+            renderPokemon(searchPokemon)
+            divType.innerHTML = ''
+        }
+    }
+})
 
 renderPokemon(searchPokemon);
